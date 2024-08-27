@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Criptografia de Texto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Criptografia</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Criptografia de Texto</h1>
-    <textarea id="inputTexto" placeholder="Digite seu texto aqui"></textarea><br>
-    <button onclick="criptografarTexto()">Criptografar</button>
-    <button onclick="descriptografarTexto()">Descriptografar</button><br>
-    <textarea id="outputTexto" readonly placeholder="Resultado aparecerá aqui"></textarea><br>
-    <button onclick="copiarTexto()">Copiar</button>
+    <div class="container">
+        <div class="input-section">
+            <h1>Digite seu texto</h1>
+            <textarea id="inputText" placeholder="Digite aqui..."></textarea>
+        </div>
+        <div class="output-section">
+            <p>Nenhuma mensagem encontrada</p>
+            <div class="illustration">
+                <img src="assets/sem-msg.jpg" alt="Ilustração">
+            </div>
+        </div>
+    </div>
 
-    <script>
-        function criptografarTexto() {
-            const texto = document.getElementById("inputTexto").value.toLowerCase();
-            document.getElementById("outputTexto").value = criptografar(texto);
-        }
+    <div class="actions">
+        <button id="encryptButton">Criptografar</button>
+        <button id="decryptButton" class="disabled">Descriptografar</button>
+        <button id="copyButton">Copiar</button>
+    </div>
 
-        function descriptografarTexto() {
-            const texto = document.getElementById("inputTexto").value.toLowerCase();
-            document.getElementById("outputTexto").value = descriptografar(texto);
-        }
-
-        function copiarTexto() {
-            const textoCopiado = document.getElementById("outputTexto");
-            textoCopiado.select();
-            document.execCommand("copy");
-        }
-    </script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

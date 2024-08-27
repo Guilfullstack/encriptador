@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F7F9FC;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.input-section, .output-section {
+    width: 45%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#inputText {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+.output-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.illustration img {
+    width: 100%;
+    height: auto;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+button {
+    width: 150px;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#encryptButton {
+    background-color: #1A73E8;
+    color: #FFF;
+}
+
+#decryptButton {
+    background-color: #1A73E8;
+    color: #FFF;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+textarea::placeholder {
+    color: #AAA;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .actions {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
