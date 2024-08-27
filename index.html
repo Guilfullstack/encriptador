@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Criptografia de Texto</title>
+</head>
+<body>
+    <h1>Criptografia de Texto</h1>
+    <textarea id="inputTexto" placeholder="Digite seu texto aqui"></textarea><br>
+    <button onclick="criptografarTexto()">Criptografar</button>
+    <button onclick="descriptografarTexto()">Descriptografar</button><br>
+    <textarea id="outputTexto" readonly placeholder="Resultado aparecerá aqui"></textarea><br>
+    <button onclick="copiarTexto()">Copiar</button>
+
+    <script>
+        function criptografarTexto() {
+            const texto = document.getElementById("inputTexto").value.toLowerCase();
+            document.getElementById("outputTexto").value = criptografar(texto);
+        }
+
+        function descriptografarTexto() {
+            const texto = document.getElementById("inputTexto").value.toLowerCase();
+            document.getElementById("outputTexto").value = descriptografar(texto);
+        }
+
+        function copiarTexto() {
+            const textoCopiado = document.getElementById("outputTexto");
+            textoCopiado.select();
+            document.execCommand("copy");
+        }
+    </script>
+</body>
+</html>
